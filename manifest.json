@@ -1,0 +1,9 @@
+{
+    "name": "Roy-Jin|Index",
+    "short_name": "Roy-Jin|Index",
+    "description": "一个神秘人",
+    "display": "standalone",
+    "start_url": "/",
+    "theme_color": "#424242",
+    "background_color": "#424242"
+}
