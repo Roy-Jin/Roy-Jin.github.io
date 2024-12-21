@@ -2,7 +2,6 @@
 作者: Roy-Jin
 主页：https://Roy-Jin.github.io/
 GitHub：https://github.com/Roy-Jin/Roy-Jin.github.io/
-版权所有，请勿删除
 */
 
 //弹窗样式
@@ -95,16 +94,16 @@ setTimeout(function () {
 }, 3000);
 
 // 新春灯笼 （ 需要时可取消注释 ）
-// new_element=document.createElement("link");
-// new_element.setAttribute("rel","stylesheet");
-// new_element.setAttribute("type","text/css");
-// new_element.setAttribute("href","./css/lantern.css");
-// document.body.appendChild(new_element);
+new_element=document.createElement("link");
+new_element.setAttribute("rel","stylesheet");
+new_element.setAttribute("type","text/css");
+new_element.setAttribute("href","./css/lantern.css");
+document.body.appendChild(new_element);
 
-// new_element=document.createElement("script");
-// new_element.setAttribute("type","text/javascript");
-// new_element.setAttribute("src","./js/lantern.js");
-// document.body.appendChild(new_element);
+new_element=document.createElement("script");
+new_element.setAttribute("type","text/javascript");
+new_element.setAttribute("src","./js/lantern.js");
+document.body.appendChild(new_element);
 
 //获取一言
 fetch("https://v1.hitokoto.cn?max_length=24")
@@ -465,12 +464,12 @@ color: rgb(30,152,255);
 `;
 let title1 = "Roy-Jin 主页";
 let title2 = `
- _____ __  __  _______     ____     __
-|_   _|  \\/  |/ ____\\ \\   / /\\ \\   / /
-  | | | \\  / | (___  \\ \\_/ /  \\ \\_/ / 
-  | | | |\\/| |\\___ \\  \\   /    \\   /  
- _| |_| |  | |____) |  | |      | |   
-|_____|_|  |_|_____/   |_|      |_|                                                     
+██████╗  ██████╗ ██╗   ██╗   ██╗██╗███╗   ██╗
+██╔══██╗██╔═══██╗╚██╗ ██╔╝   ██║██║████╗  ██║
+██████╔╝██║   ██║ ╚████╔╝    ██║██║██╔██╗ ██║
+██╔══██╗██║   ██║  ╚██╔╝██   ██║██║██║╚██╗██║
+██║  ██║╚██████╔╝   ██║ ╚█████╔╝██║██║ ╚████║
+╚═╝  ╚═╝ ╚═════╝    ╚═╝  ╚════╝ ╚═╝╚═╝  ╚═══╝
 `;
 let content = `
 版 本 号：1.0

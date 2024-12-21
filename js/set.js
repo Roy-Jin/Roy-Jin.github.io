@@ -1,10 +1,3 @@
-/*
-作者: Roy-Jin
-主页：https://Roy-Jin.github.io/
-GitHub：https://github.com/Roy-Jin/Roy-Jin.github.io/
-版权所有，请勿删除
-*/
-
 // 背景图片 Cookies
 function setBgImg(bg_img) {
   if (bg_img) {
