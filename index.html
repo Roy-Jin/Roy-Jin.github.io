@@ -2,421 +2,99 @@
 <html lang="zh-CN">
 
 <head>
-    <!-- 基础信息 -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="renderer" content="webkit" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="force-rendering" content="webkit" />
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
-    <meta name="theme-color" content="#424242" />
-    <meta name="description" content="Roy-Jin|MyIndex">
-    <meta name="keywords" content="Index">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Roy-Jin | MyIndex</title>
+
+    <!-- 网站图标 -->
+    <link rel="icon" href="https://rj-cloud.pages.dev/ForMe/avatar-nobg.png" type="image/png">
+    <link rel="shortcut icon" href="https://rj-cloud.pages.dev/ForMe/avatar.ico" type="image/x-icon">
+
+    <!-- SEO 优化 -->
     <meta name="author" content="Roy-Jin">
-    <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="./css/mobile.css">
-    <link rel="stylesheet" type="text/css" href="./css/loading.css">
-    <link rel="stylesheet" type="text/css" href="./css/animation.css">
-    <link rel="icon" href="./favicon.ico">
-    <link rel="apple-touch-icon" href="./img/icon/logo.png">
-    <!-- Izitoast -->
-    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/css/iziToast.min.css">
-    <script type="text/javascript"
-        src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/js/iziToast.min.js">
-        </script>
-    <title>Roy-Jin|MyIndex</title>
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/aplayer/1.10.1/APlayer.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/aplayer/1.10.1/APlayer.min.js" crossorigin="anonymous"
-        referrerpolicy="no-referrer"></script>
-    <script>
-        if ( /*@cc_on!@*/ false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href =
-            "/upgrade-your-browser/index.html?referrer=" + encodeURIComponent(window.location.href);
-    </script>
-    <link rel="manifest" href="/manifest.json">
+    <meta name="keywords" content="Roy-Jin, Roy, Jin, 个人主页, 个人网站, MyIndex">
+    <meta name="description"
+        content="嘿～欢迎来到我的个人主页✨！这里是 Roy-Jin，一个用代码“烹饪”生活的小极客。点击开启“生活小确幸”与“灵魂调味剂”的奇妙碰撞之旅吧～(๑・̀ㅂ・́)و✧🎉">
+    <meta property="og:title" content="Roy-Jin | MyIndex">
+    <meta property="og:description"
+        content="嘿～欢迎来到我的个人主页✨！这里是 Roy-Jin，一个用代码“烹饪”生活的小极客。点击开启“生活小确幸”与“灵魂调味剂”的奇妙碰撞之旅吧～(๑・̀ㅂ・́)و✧🎉">
+    <meta property="og:image" content="https://rj-cloud.pages.dev/ForMe/avatar.png">
+    <meta property="og:url" content="https://r-j.pages.dev">
+    <link rel="canonical" href="https://r-j.pages.dev" />
+
+    <!-- 初始化样式表 -->
+    <link rel="stylesheet" href="/style/base.css">
+    <link rel="stylesheet" href="/style/loading.css">
+    <link rel="stylesheet" href="/style/body.css">
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/panel.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- 初始化脚本 -->
+    <script src="/script/initial.js"></script>
+    <script src="/script/theme.js" defer></script>
+    <script src="/script/panel.js" defer></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.13/dayjs.min.js" defer></script>
+    <script src="/script/time.js" defer></script>
 </head>
 
 <body>
-    <!--加载动画-->
-    <div id="loading-box">
-        <div class="loading-left-bg"></div>
-        <div class="loading-right-bg"></div>
-        <div class="spinner-box">
-            <div class="loader">
-                <div class="inner one"></div>
-                <div class="inner two"></div>
-                <div class="inner three"></div>
+    <!-- 加载效果 -->
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- 主界面 -->
+    <div class="main">
+        <!-- 页眉区域 -->
+        <div class="header">
+            <div class="methods"></div>
+            <div class="title">
+                <h3 id="title-text"></h3>
+                <p id="subtitle-text"></p>
             </div>
-            <div class="loading-word">
-                <p class="loading-title" id="loading-title">Roy-Jin|Index</p>
-                <span id="loading-text">Loading......</span>
+        </div>
+
+        <!-- 主要内容 -->
+        <div class="body">
+            <div class="ForMe">
+                <div class="base">
+                    <img src="https://rj-cloud.pages.dev/ForMe/avatar.png" alt="AVATAR" id="avatar">
+                    <h4 id="name">Roy-Jin</h4>
+                </div>
+                <div class="quote">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p id="quote-text"></p>
+                </div>
+                <div id="social">
+                    <li>https://github.com/Roy-Jin</li>
+                    <li>JinRoy@outlook.com</li>
+                    <li>https://qm.qq.com/q/2Qaj5mB6Jq</li>
+                    <li>https://space.bilibili.com/3461572714302163</li>
+                </div>
+            </div>
+            <div class="content">
+                <div id="time"></div>
+                <div id="hitokoto"></div>
+                <div id="projects">
+                    <a href=""></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 面板区域 -->
+        <div class="p0"></div>
+        <div class="panel">
+            <div class="container">
+                <div class="p1"></div>
+                <div class="panel-content">
+                    <div class="drag-bar"></div>
+                </div>
+                <div id="copyright"></div>
             </div>
         </div>
     </div>
-    <section id="section" class="section">
-        <!-- 背景图片 -->
-        <style type="text/css">
-            body {
-                background: url("img/bg.jpg") no-repeat center center fixed;
-                /*兼容浏览器版本*/
-                -webkit-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-            }
-
-            /*背景图*/
-
-            .test {
-                margin-top: 100px;
-            }
-        </style>
-        <!-- 鼠标指针 -->
-        <div id="g-pointer-1"></div>
-        <div id="g-pointer-2"></div>
-        <!-- 主体内容 -->
-        <main id="main" class="main">
-            <!-- 搜索框 -->
-            <div class="close-btn">
-                <span class="fas fa-times"></span>
-            </div>
-            <div class="search-btn">
-                <span class="fas fa-search"></span>
-            </div>
-            <div class="search-data">
-                <input type="text" id="inp" required />
-                <div class="line"></div>
-                <label>Type to search...</label>
-                <span class="fas fa-search" id="btn"></span>
-            </div>
-
-            <script>
-                var oInp = document.getElementById('inp');
-                var oBtn = document.getElementById('btn');
-
-                oBtn.onclick = function () {
-                    Search();
-                }
-
-                document.onkeydown = function () {
-                    if (event.keyCode == 13) {
-                        Search();
-                    }
-                }
-
-                function Search() {
-                    var url = 'https://cn.bing.com/search?q=' + oInp.value;
-                    if (oInp.value.trim() !== '')
-                        window.open(url, '_self');
-                }
-            </script>
-
-            <script>
-                $(".search-btn").click(function () {
-                    $(this).css("display", "none");
-                    $(".search-data").fadeIn(500);
-                    $(".close-btn").fadeIn(500);
-                    $(".search-data .line").addClass("active");
-                    setTimeout(function () {
-                        $("input").focus();
-                        $(".search-data label").fadeIn(500);
-                        $(".search-data span").fadeIn(500);
-                    }, 800);
-                });
-                $(".close-btn").click(function () {
-                    $(".search-btn").fadeIn(800);
-                    $(".search-data").fadeOut(500);
-                    $(".close-btn").fadeOut(500);
-                    $(".search-data .line").removeClass("active");
-                    $("input").val("");
-                    $(".search-data label").fadeOut(500);
-                    $(".search-data span").fadeOut(500);
-                });
-            </script>
-            <div class="container" id="container">
-                <div class="row" id="row">
-                    <div class="col left">
-                        <!--基本信息-->
-                        <div class="main-left">
-                            <!--Logo-->
-                            <div class="main-img">
-                                <img id="logo-img" src="./img/icon/logo.jpg" alt="img">
-                                <div class="img-title">
-                                    <span class="img-title-big" id="logo-text-1">Roy-Jin</span>
-                                </div>
-                            </div>
-                            <!--介绍信息-->
-                            <div class="message cards" id="switchmore">
-                                <div class="des" id="des">
-                                    <i class="fa-solid fa-quote-left"></i>
-                                    <div class="des-title"><span id="change">Hello&nbsp;World&nbsp;!</span><br /><span
-                                            id="change1">一个神秘人</span></div>
-                                    <i class="fa-solid fa-quote-right"></i>
-                                </div>
-                            </div>
-                            <!--社交链接-->
-                            <div class="social" id="social">
-                                <a href="https://github.com/Roy-Jin" class="link" id="github" style="margin-left: 4px"
-                                    target="_blank">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                                <a href="https://qm.qq.com/q/2Qaj5mB6Jq" class="link" id="qq" target="_blank">
-                                    <i class="fa-brands fa-qq"></i>
-                                </a>
-                                <a href="mailto:JinRoy@outlook.com" class="link" id="email">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </a>
-                                <a href="https://space.bilibili.com/3461572714302163" class="link" id="bilibili"
-                                    target="_blank">
-                                    <i class="fa-brands fa-bilibili"></i>
-                                </a>
-                                <a id="link-text">通过这里联系我</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--第二屏 Logo-->
-                    <div class="logo cards" style="display: none" id="changemore">
-                        <a class="logo-text" id="logo-text-small">Roy-Jin</a>
-                    </div>
-                    <div class="col right">
-                        <div class="main-right">
-                            <!--功能区-->
-                            <div class="row rightone" id="rightone">
-                                <div class="col hitokotos">
-                                    <!--一言-->
-                                    <div class="hitokoto cards" id="hitokoto">
-                                        <!--切换音乐-->
-                                        <div class="open-music fixed-top" id="open-music">
-                                            <i class="fa-solid fa-compact-disc"></i>
-                                            <span>&nbsp;打开音乐播放器</span>
-                                        </div>
-                                        <!--切换音乐结束-->
-                                        <div class="hitokoto-all">
-                                            <div class="hitokoto-text"><span id="hitokoto_text">一个神秘人</span>
-                                            </div>
-                                            <div class="hitokoto-from">-「&nbsp;<span
-                                                    id="from_text">Roy-Jin</span>&nbsp;」
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--音乐-->
-                                    <div class="music" id="music">
-                                        <div class="music-all">
-                                            <div class="music-button">
-                                                <div id="music-open">音乐列表</div>
-                                                <div id="music-close">回到一言</div>
-                                            </div>
-                                            <div class="music-control">
-                                                <i class="fa-solid fa-backward-step" id="last"></i>
-                                                <div id="play">
-                                                    <i class="fa-solid fa-play"></i>
-                                                </div>
-                                                <i class="fa-solid fa-forward-step" id="next"></i>
-                                            </div>
-                                            <div class="music-menu">
-                                                <div class="music-text">
-                                                    <span id="music-name">未播放音乐</span>
-                                                </div>
-                                                <div class="music-volume" style="display: none;">
-                                                    <div id="volume-ico">
-                                                        <i class="fa-solid fa-volume-low"></i>
-                                                    </div>
-                                                    <input type="range" min="0" max="1" step="0.01" id="volume">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col times">
-                                    <!--时间-->
-                                    <div class="time cards" id="upWeather">
-                                        <div class="timeshow" id="time">
-                                            2000&nbsp;年&nbsp;0&nbsp;月&nbsp;00&nbsp;日&nbsp;<span
-                                                class="weekday">星期一</span><br><span class="time-text">00:00:00</span>
-                                        </div>
-                                        <div class="weather">
-                                            <span id="city_text"> </span>&nbsp;
-                                            <span id="wea_text"> </span>&nbsp;
-                                            <span id="tem_text"> </span>
-                                            <span id="win_text"> </span>
-                                            <span id="win_speed"> </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--分隔线-->
-                            <div class="line">
-                                <i class="fa-solid fa-link"></i>
-                                <span class="line-text">网站列表</span>
-                            </div>
-                            <!--网站链接-->
-                            <div class="link">
-                                <!--第一组-->
-                                <div class="row">
-                                    <div class="col">
-                                        <a id="link-url-1" href="https://blog.csdn.net/2301_76813514" target="_blank">
-                                            <div class="link-card cards">
-                                                <i id="link-icon-1" class="fa-solid fa-blog"></i>
-                                                <span class="link-name" id="link-name-1">CSDN博客</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col 2">
-                                        <a id="link-url-2" href="https://tongyi.aliyun.com/qianwen/" target="_blank">
-                                            <div class="link-card cards">
-                                                <i id="link-icon-2" class="fa-solid fa-cloud"></i>
-                                                <span class="link-name" id="link-name-2">通义千问</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a id="link-url-3" href="https://music.163.com/#/user/home?id=6339237873"
-                                            target="_blank">
-                                            <div class="link-card cards">
-                                                <i id="link-icon-3" class="fa-solid fa-music"></i>
-                                                <span class="link-name" id="link-name-3">网易云</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <!--第二组-->
-                                <div class="row" style="margin-top: 1.5rem;">
-                                    <div class="col">
-                                        <a id="link-url-4" href="https://ryboard.pages.dev/" target="_blank">
-                                            <div class="link-card cards">
-                                                <i id="link-icon-4" class="fa-solid fa-compass"></i>
-                                                <span class="link-name" id="link-name-4">RuoYiBoard</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col 2">
-                                        <a id="link-url-5" href="https://jsterm.pages.dev/" target="_blank">
-                                            <div class="link-card cards">
-                                                <i id="link-icon-5" class="fa-solid fa-compass"></i>
-                                                <span class="link-name" id="link-name-4">JSTERM</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a id="link-url-5" href="https://2048-rj.pages.dev/" target="_blank">
-                                            <div class="link-card cards">
-                                                <i id="link-icon-5" class="fa-solid fa-compass"></i>
-                                                <span class="link-name" id="link-name-4">2048</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--展开菜单按钮-->
-                <div class="menu" id="switchmenu">
-                    <a class="munu-button cards" id="menu">
-                        <i class="fa-solid fa-bars"></i>
-                    </a>
-                </div>
-                <!--更多内容-->
-                <div class="more" id="more">
-                    <!--关闭按钮-->
-                    <div class="close fixed-top" id="close">
-                        <i class="fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <div class="line" style="margin-top: 1rem;">
-                        <i class="fa-solid fa-angle-left"></i>
-                        <span class="line-text">时间胶囊</span>
-                        <i class="fa-solid fa-angle-right"></i>
-                    </div>
-                    <div class="date" id="date">
-                        <div class="item" id="dayProgress">
-                            <div class="date-text" style="margin-top: 0rem;">今日已经度过了&nbsp;<span></span>&nbsp;小时</div>
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                        </div>
-                        <div class="item" id="weekProgress">
-                            <div class="date-text">本周已经度过了&nbsp;<span></span>&nbsp;天</div>
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                        </div>
-                        <div class="item" id="monthProgress">
-                            <div class="date-text">本月已经度过了&nbsp;<span></span>&nbsp;天</div>
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                        </div>
-                        <div class="item" id="yearProgress">
-                            <div class="date-text">今年已经度过了&nbsp;<span></span>&nbsp;个月</div>
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--更多页面-->
-                <div class="box" id="box" style="display: none">
-                    <div class="box-wrapper">
-                        <!--关闭按钮-->
-                        <div class="closebox fixed-top" id="closemore">
-                            <i class="fa-solid fa-circle-xmark"></i>
-                        </div>
-                        <!--左侧内容-->
-                        <div class="box-left">
-                            <div class="img-title">
-                                <span class="img-title-big" id="logo-title-other">Roy-Jin</span>
-                                <span class="img-text">&nbsp;v&nbsp;1.0</span>
-                                <a href="https://github.com/Roy-Jin" target="_blank">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <!--APlayer-->
-                        <div class="box-right">
-                            <div id="aplayer">
-                                <span>音乐播放器加载失败</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <!-- 版权信息 -->
-        <footer id="footer" class="fixed-bottom footer">
-            <div class="power">Copyright&nbsp;©&nbsp;<span id="power-year">2024</span>
-                <script>
-                    document.write(' - ' + (new Date()).getFullYear())
-                </script>&nbsp;<a href="/" id="power-text">Roy-Jin|MyIndex</a>
-            </div>
-            <!-- 歌词显示 -->
-            <div id="lrc"></div>
-        </footer>
-    </section>
-    <!-- sw.js -->
-    <script>
-        if ("serviceWorker" in navigator) {
-            window.addEventListener("load", function () {
-                navigator.serviceWorker.register("sw.js");
-            });
-        }
-    </script>
-    <!-- noscript -->
-    <noscript>
-        <div class="noscript fixed-top">请开启 JavaScript</div>
-    </noscript>
-    <!-- JS -->
-    <script type="text/javascript" src="./js/main.js"></script>
-    <script type="text/javascript" src="./js/set.js"></script>
-    <script type="text/javascript" src="./js/time.js"></script>
-    <script type="text/javascript" src="./js/js.cookie.js"></script>
-    <script type="text/javascript"
-        src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.1.0/js/bootstrap.min.js">
-        </script>
 </body>
 
 </html>

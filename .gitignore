@@ -1,0 +1,20 @@
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+build/
+old/
+
+# Local development files
+.env
+.env.local
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

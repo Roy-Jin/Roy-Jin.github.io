@@ -1,0 +1,57 @@
+{
+    "data": {
+        "name": "Roy-Jin.",
+        "title": "Roy-Jin 的主页",
+        "subtitle": "Welcome to Roy-Jin's website!",
+        "quote": "咖啡越苦，生活越甜！",
+        "avatar": [
+            "https://rj-cloud.pages.dev/ForMe/avatar.png",
+            "https://rj-cloud.pages.dev/ForMe/avatar-nobg.png"
+        ],
+        "social": [
+            {
+                "name": "GitHub",
+                "color": "var(--text-color)",
+                "icon": "fa-brands fa-github",
+                "href": "https://github.com/Roy-Jin"
+            },
+            {
+                "name": "Email",
+                "color": "#ee7a5a",
+                "icon": "fa-solid fa-envelope",
+                "href": "mailto:JinRoy@outlook.com"
+            },
+            {
+                "name": "QQ",
+                "color": "#12b7f5",
+                "icon": "fa-brands fa-qq",
+                "href": "https://qm.qq.com/q/2Qaj5mB6Jq"
+            },
+            {
+                "name": "Bilibili",
+                "color": "#fc8bab",
+                "icon": "fa-brands fa-bilibili",
+                "href": "https://space.bilibili.com/3461572714302163"
+            }
+        ],
+        "projects": [
+            {
+                "name": "RuoYiBoard",
+                "href": "https://ryboard.pages.dev"
+            },
+            {
+                "name": "JSTERM",
+                "href": "https://jsterm.pages.dev"
+            },
+            {
+                "name": "2048",
+                "href": "https://2048-rj.pages.dev"
+            },
+            {
+                "name": "svg-counter",
+                "href": "https://svg-counter.pages.dev"
+            }
+        ],
+        "copyright": "Copyright © 2024 - 2025 Roy-Jin"
+    }
+}

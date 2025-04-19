@@ -1,0 +1,66 @@
+:root {
+    /* 主色调 */
+    --main-bg: #ffffff;
+    --page-bg: #e2e2e2;
+    --panel-bg: #57b2aa;
+    --theme-color: #4a90e2;
+    --theme-color-light: color-mix(in srgb, var(--theme-color) 20%, transparent);
+    --text-color: #444;
+    --primary-color: #4a90e2;
+
+    /* 其它变量 */
+    --border-radius: 4rem;
+    --panel-height: 55px;
+    --transition: all 0.3s ease;
+    --main-width: calc(100vw - 1rem);
+}
+
+[data-theme="dark"] {
+    /* 主色调 */
+    --main-bg: #26242e;
+    --page-bg: #34323d;
+    --panel-bg: #5d6d6f;
+    --text-color: #e2e2e2;
+}
+
+@font-face {
+    font-family: "仓耳逍遥行书";
+    src: url("/fonts/仓耳逍遥行书.ttf");
+}
+
+@font-face {
+    font-family: "Playball";
+    src: url("/fonts/Playball-Regular.woff2");
+}
+
+@font-face {
+    font-family: "Electrolize";
+    src: url("/fonts/Electrolize-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    transition: var(--transition);
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    height: 100vh;
+    overflow-y: hidden;
+    font-family: "Playball";
+    color: var(--text-color);
+    background-color: var(--main-bg);
+    background: linear-gradient(to bottom, var(--main-bg), var(--page-bg));
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--panel-height);
+}

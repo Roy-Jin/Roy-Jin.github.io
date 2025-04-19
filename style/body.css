@@ -1,0 +1,195 @@
+.body {
+    flex: 1;
+    gap: 2rem;
+    display: flex;
+    width: var(--main-width);
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    background-color: var(--page-bg);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.body::-webkit-scrollbar {
+    display: none;
+}
+
+.body>.ForMe {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ForMe>.base {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    background: radial-gradient(ellipse at 50% 80%, var(--theme-color), transparent);
+}
+
+.ForMe #avatar {
+    max-width: 66%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.ForMe #name {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: normal;
+    font-family: "Playball";
+}
+
+.ForMe>#social {
+    gap: 1rem;
+    padding: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ForMe>#social>.link {
+    height: 100%;
+    padding: .5rem;
+    display: flex;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    background-color: var(--theme-color-light);
+    color: color-mix(in srgb, var(--theme-color) 85%, transparent);
+}
+
+.ForMe>.quote {
+    width: 95%;
+    padding: .5rem;
+    display: flex;
+    max-width: 500px;
+    border-radius: 10px;
+    flex-direction: row;
+    font-family: "仓耳逍遥行书";
+    background: linear-gradient(to right bottom, var(--theme-color-light), transparent);
+}
+
+.quote>.fa-quote-left {
+    font-size: 1.5rem;
+    color: var(--theme-color);
+    margin-right: 1rem;
+}
+
+.quote>#quote-text {
+    flex: 1;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.body>.content {
+    gap: 1rem;
+    display: flex;
+    max-width: 500px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#time {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: radial-gradient(ellipse at 33% 25%, var(--theme-color), transparent)
+}
+
+#time .time-text {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#time .time-num {
+    font-family: sans-serif;
+}
+
+#time .time-sub-text {
+    font-size: 15px;
+}
+
+#time .day-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#time hr {
+    width: 100%;
+    height: 1px;
+    border: none;
+    margin: 1rem auto;
+    background: linear-gradient(to right, var(--theme-color), transparent 64%);
+}
+
+.hitokoto {
+    font-weight: bold;
+    font-family: "仓耳逍遥行书";
+}
+
+.hitokoto>.hitokoto-text {
+    font-size: 1.5rem;
+}
+
+.hitokoto>.from {
+    opacity: 0.648;
+    float: right;
+    font-size: 64.8%;
+}
+
+.content>#projects {
+    gap: .5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content>#projects>.project {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-color);
+    border-left: 4px solid var(--theme-color);
+    background-color: var(--theme-color-light); 
+}
+
+/* 当屏幕宽度小于等于 768px 时，应用以下样式调整 */
+@media screen and (max-width: 768px) {
+    .body {
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .ForMe {
+        gap: 0;
+        margin-top: 1rem;
+        height: 100%;
+    }
+
+    #social {
+        width: 100%;
+    }
+
+    .content {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+}
