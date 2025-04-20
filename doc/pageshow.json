@@ -3,7 +3,7 @@
         "name": "Roy-Jin.",
         "title": "Roy-Jin 的主页",
         "subtitle": "Welcome to Roy-Jin's website!",
-        "quote": "咖啡越苦，生活越甜！",
+        "quote": "咖啡很苦，生活很甜！",
         "avatar": [
             "https://rj-cloud.pages.dev/ForMe/avatar.png",
             "https://rj-cloud.pages.dev/ForMe/avatar-nobg.png"
@@ -46,10 +46,6 @@
             {
                 "name": "2048",
                 "href": "https://2048-rj.pages.dev"
-            },
-            {
-                "name": "svg-counter",
-                "href": "https://svg-counter.pages.dev"
             }
         ],
         "copyright": "Copyright © 2024 - 2025 Roy-Jin"

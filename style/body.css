@@ -137,16 +137,16 @@
     background: linear-gradient(to right, var(--theme-color), transparent 64%);
 }
 
-.hitokoto {
-    font-weight: bold;
+.sayings {
     font-family: "仓耳逍遥行书";
 }
 
-.hitokoto>.hitokoto-text {
-    font-size: 1.5rem;
+.sayings>.text {
+    font-weight: bold;
 }
 
-.hitokoto>.from {
+.sayings>.from {
+    white-space: nowrap;
     opacity: 0.648;
     float: right;
     font-size: 64.8%;
@@ -168,7 +168,7 @@
     text-decoration: none;
     color: var(--text-color);
     border-left: 4px solid var(--theme-color);
-    background-color: var(--theme-color-light); 
+    background-color: var(--theme-color-light);
 }
 
 /* 当屏幕宽度小于等于 768px 时，应用以下样式调整 */
