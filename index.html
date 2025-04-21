@@ -36,7 +36,7 @@
     <script src="/script/theme.js" defer></script>
     <script src="/script/panel.js" defer></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.13/dayjs.min.js" defer></script>
-    <script src="/script/time.js" defer></script>
+    <script src="/script/today.js" defer></script>
 </head>
 
 <body>
@@ -75,7 +75,17 @@
                 </div>
             </div>
             <div class="content">
-                <div id="time"></div>
+                <div class="today">
+                    <div id="date">
+                        <p class="time">
+                            <span class="num">00:00:00</span>
+                            <span class="sub">AM</span>
+                        </p>
+                        <p class="day">Monday, 1 January.</p>
+                    </div>
+                    <hr>
+                    <div id="sayings"></div>
+                </div>
                 <div id="projects">
                     <a href=""></a>
                 </div>
