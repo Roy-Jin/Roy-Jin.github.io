@@ -167,6 +167,7 @@
     border-radius: 10px;
     text-decoration: none;
     color: var(--text-color);
+    font-family: "Electrolize", sans-serif;
     border-left: 4px solid var(--theme-color);
     background-color: var(--theme-color-light);
 }
