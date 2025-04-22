@@ -9,6 +9,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    color: color-mix(in srgb, var(--text-color) 33%, transparent);
 }
 
 .loader.hidden {
