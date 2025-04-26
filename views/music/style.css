@@ -1,0 +1,120 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Electrolize";
+    background: transparent !important;
+}
+
+#aplayer {
+    position: fixed;
+    display: none;
+}
+
+.music-player {
+    gap: 2rem;
+    flex: 1;
+    display: flex;
+    overflow: auto;
+    max-width: 800px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .music-player>.cover {
+    height: 50%;
+    margin: 2rem;
+    max-height: 400px;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    border: 1px solid #ffffff1c;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.music-player>.control-panel {
+    flex: 1;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.control-panel>.song {
+    gap: 1rem;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.song>.title {
+    font-size: 1.5rem;
+}
+
+.song>.author {
+    font-size: 1.25rem;
+}
+
+.song>.author::before {
+    content: "作者：";
+}
+
+.song>.lyric {
+    gap: 0.5rem;
+    height: 3.6rem;
+    display: flex;
+    overflow: auto;
+    font-size: .8rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.song>.lyric::-webkit-scrollbar {
+    display: none;
+}
+
+.control-panel>.controls {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.controls>.control {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.control-panel>.progress-container {
+    gap: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: sans-serif;
+    justify-content: space-between;
+}
+
+.progress-container>.progress-bar {
+    flex: 1;
+    height: 1rem;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    .cover {
+        display: none !important;
+    }
+
+    .music-player {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    /* .control-panel>.progress-container {
+        width: 100%;
+    } */
+}

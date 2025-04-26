@@ -49,5 +49,12 @@
             }
         ],
         "copyright": "Copyright © 2024 - 2025 Roy-Jin"
+    },
+    "music": {
+        "enable": true,
+        "api": "https://api.injahow.cn/meting/",
+        "server": "netease",
+        "type": "playlist",
+        "id": "7697114803"
     }
 }
