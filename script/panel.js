@@ -28,5 +28,9 @@ const panelDrag = () => {
         document.addEventListener('mousemove', handleMouseMove);
         document.addEventListener('mouseup', handleMouseUp);
     });
+
+    dragBar.addEventListener('dblclick', (e) => {
+        document.querySelector(".panel>.container>.p1").scrollIntoView({ behavior: 'smooth', block: 'start' });
+    })
 }
 panelDrag();

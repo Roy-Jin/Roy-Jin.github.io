@@ -77,6 +77,11 @@
     background-color: #ffffff33;
 }
 
+.panel-content>.panel-content-container {
+    width: 100%;
+    flex: 1;
+}
+
 .container>#copyright {
     width: 100%;
     display: flex;
