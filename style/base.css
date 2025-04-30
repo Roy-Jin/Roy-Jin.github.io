@@ -23,10 +23,11 @@
     --text-color: #e2e2e2;
 }
 
-@font-face {
+/* 为优化加载速度这里改为动态加载了 */
+/* @font-face {
     font-family: "仓耳逍遥行书";
     src: url("/fonts/仓耳逍遥行书.ttf");
-}
+} */
 
 @font-face {
     font-family: "Playball";

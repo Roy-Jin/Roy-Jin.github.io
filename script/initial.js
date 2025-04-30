@@ -24,6 +24,14 @@ const pageshow = async () => {
     const config = await fetch("/doc/pageshow.json").then(response => response.json());
     window.site_config = config;
 
+    // 动态加载字体
+    if (config.fonts) {
+        const fontFace = config.fonts.map(font => `@font-face { font-family: '${font.name}'; src: url('${font.url}'); }`).join('');
+        const styleElement = document.createElement('style');
+        styleElement.innerHTML = fontFace;
+        document.head.appendChild(styleElement);
+    }
+
     // 设置元素属性
     for (const element of [
         {
@@ -64,7 +72,7 @@ const pageshow = async () => {
         }, {
             selector: "#projects",
             attr: {
-                innerHTML: (() => config.data.projects.map(project => `<a href="${project.href}" class="project" target="_blank" style="background:color-mix(in srgb, ${project.color ?? ''} 20%, transparent)"><div class="text">${project.name}</div></a>`).join(''))() 
+                innerHTML: (() => config.data.projects.map(project => `<a href="${project.href}" class="project" target="_blank" style="background:color-mix(in srgb, ${project.color ?? ''} 20%, transparent)"><div class="text">${project.name}</div></a>`).join(''))()
             }
         }
     ]) {
