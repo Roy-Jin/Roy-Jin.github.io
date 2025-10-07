@@ -2,7 +2,7 @@ import router from '/module/router.js';
 import theme from '/module/theme.js';
 import pageshow from '/module/pageshow.js';
 
-window.window.addEventListener('load', function () {
+window.addEventListener('pageshow', function () {
     setTimeout(() => {
         document.querySelector(".loading").setAttribute("data-hidden", true);
     }, 500);
