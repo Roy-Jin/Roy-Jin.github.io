@@ -1,6 +1,7 @@
 import router from '/module/router.js';
 import theme from '/module/theme.js';
 import pageshow from '/module/pageshow.js';
+import loaded from '/module/loading.js';
 
 document.querySelector(".loading>small").addEventListener("click", () => {
     window.location.reload();
@@ -22,6 +23,12 @@ pageshow.ref(
         }
     }]
 );
+
+loaded().then(() => {
+    document.querySelector(".loading").setAttribute("data-hidden", true);
+}).catch((error) => {
+    mui.toast(`<span style="color:brown;">${error.message}</span></span>`);
+});
 
 document.getElementById("menu-btn").addEventListener("click", (e) => {
     if (document.getElementById("toggle-menu").getAttribute("data-open")) {
