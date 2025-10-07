@@ -2,11 +2,11 @@ import router from '/module/router.js';
 import theme from '/module/theme.js';
 import pageshow from '/module/pageshow.js';
 
-window.onpageshow = () => {
+window.window.addEventListener('load', function () {
     setTimeout(() => {
         document.querySelector(".loading").setAttribute("data-hidden", true);
     }, 500);
-}
+});
 
 document.querySelector(".loading>small").addEventListener("click", () => {
     window.location.reload();
@@ -21,7 +21,7 @@ pageshow.ref(
             src: site_data.avatar[1]
         }
     }, {
-        selector: ".title h3",
+        selector: ".title h2",
         attr: {
             innerHTML: site_data.title.split("|")[0]
                 + "|<span class='subtitle'>" + site_data.title.split("|")[1] + "</span>"

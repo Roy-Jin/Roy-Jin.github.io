@@ -14,7 +14,7 @@
     /* 其它变量 */
     --header-height: 48px;
     --border-radius: 2rem;
-    --transition: all 0.3s ease;
+    --transition: 0.3s ease;
 }
 
 [data-theme="dark"] {

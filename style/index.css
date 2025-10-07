@@ -68,7 +68,7 @@
     text-align: center;
     pointer-events: none;
     text-decoration: underline;
-    animation: delayshower 7s 1;
+    animation: delayshower 12s 1;
     animation-fill-mode: forwards;
 }
 
@@ -115,8 +115,14 @@
 }
 
 #menu-btn {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     color: var(--theme-color);
-    font-size: 150%;
+    font-size: 200%;
 }
 
 #toggle-menu {

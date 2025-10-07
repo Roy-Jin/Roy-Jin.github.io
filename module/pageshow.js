@@ -30,14 +30,6 @@ let pageshow = {
         const config = await fetch("/doc/pageshow.json").then(response => response.json());
         pageshow.data = config;
 
-        // 动态加载字体
-        if (config.fonts) {
-            const fontFace = config.fonts.map(font => `@font-face { font-family: '${font.name}'; src: url('${font.url}'); }`).join('');
-            const styleElement = document.createElement('style');
-            styleElement.innerHTML = fontFace;
-            document.head.appendChild(styleElement);
-        };
-
         // 禁止右键菜单
         if (!options.contextmenu) {
             document.oncontextmenu = function () {

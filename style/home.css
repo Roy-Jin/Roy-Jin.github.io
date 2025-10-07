@@ -61,16 +61,21 @@
 }
 
 .ForMe>#social>.link {
-    height: 100%;
-    padding: .5rem;
+    height: 48px;
+    width: 48px;
+    padding: 8px;
     display: flex;
-    aspect-ratio: 1/1;
     border-radius: 10px;
     align-items: center;
     text-decoration: none;
     justify-content: center;
     background-color: var(--theme-color-light);
     color: color-mix(in srgb, var(--theme-color) 85%, transparent);
+}
+
+@font-face {
+    font-family: "仓耳逍遥行书";
+    src: url("/fonts/仓耳逍遥行书.ttf");
 }
 
 .ForMe>.quote {

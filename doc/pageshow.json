@@ -54,11 +54,5 @@
         "server": "netease",
         "type": "playlist",
         "id": "7697114803"
-    },
-    "fonts": [
-        {
-            "name": "仓耳逍遥行书",
-            "url": "/fonts/仓耳逍遥行书.ttf"
-        }
-    ]
+    }
 }
