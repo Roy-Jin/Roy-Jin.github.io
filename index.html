@@ -39,8 +39,15 @@
         <small>
             <span class="fa-solid fa-circle-notch fa-3x fa-spin"></span>
             <br><br><i>若长时间未加载成功, 请点击这里刷新该页面!</i>
-        </span>
+        </small>
     </div>
+    <script>
+        window.onload = () => {
+            setTimeout(() => {
+                document.querySelector(".loading").setAttribute("data-hidden", true);
+            }, 333);
+        }
+    </script>
 
     <!-- 主界面 -->
     <div class="main">

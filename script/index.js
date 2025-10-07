@@ -2,12 +2,6 @@ import router from '/module/router.js';
 import theme from '/module/theme.js';
 import pageshow from '/module/pageshow.js';
 
-window.addEventListener('pageshow', function () {
-    setTimeout(() => {
-        document.querySelector(".loading").setAttribute("data-hidden", true);
-    }, 500);
-});
-
 document.querySelector(".loading>small").addEventListener("click", () => {
     window.location.reload();
 });
