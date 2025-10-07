@@ -1,0 +1,24 @@
+{
+    "routes": [
+        {
+            "enable": true,
+            "inner": [
+                "<span class='fa fa-home'></span>",
+                "MyIndex"
+            ],
+            "path": "/",
+            "url": "/views/home.html",
+            "title": "MyIndex"
+        },
+        {
+            "enable": false,
+            "inner": [
+                "<span class='fa fa-music'></span>",
+                "Enjoy Music"
+            ],
+            "path": "music",
+            "url": "/views/music.html",
+            "title": "EnjoyMusic"
+        }
+    ]
+}

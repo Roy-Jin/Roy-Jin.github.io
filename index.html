@@ -24,89 +24,37 @@
     <link rel="canonical" href="https://r-j.pages.dev" />
 
     <!-- 初始化样式表 -->
-    <link rel="stylesheet" href="/style/base.css">
-    <link rel="stylesheet" href="/style/loading.css">
-    <link rel="stylesheet" href="/style/body.css">
-    <link rel="stylesheet" href="/style/header.css">
-    <link rel="stylesheet" href="/style/panel.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="/style/index.css">
 
     <!-- 初始化脚本 -->
-    <script src="/script/initial.js"></script>
-    <script src="/script/theme.js" defer></script>
-    <script src="/script/panel.js" defer></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.13/dayjs.min.js" defer></script>
-    <script src="/script/today.js" defer></script>
+    <script src="/module/mui.all.js"></script>
+    <script type="module" src="/script/index.js"></script>
 </head>
 
 <body>
     <!-- 加载效果 -->
-    <div class="loader">
-        <div class="spinner"></div>
-        <div>Roy-Jin|MyIndex</div>
+    <div class="loading">
+        <img src="https://rj-cloud.pages.dev/ForMe/avatar-nobg.png" alt="Roy-Jin">
+        <div class="text">Roy-Jin|MyIndex</div>
+        <small>
+            <span class="fa-solid fa-circle-notch fa-3x fa-spin"></span>
+            <br><br><i>若长时间未加载成功, 请点击这里刷新该页面!</i>
+        </span>
     </div>
 
     <!-- 主界面 -->
     <div class="main">
         <!-- 页眉区域 -->
         <div class="header">
-            <div class="methods"></div>
             <div class="title">
-                <h3 id="title-text"></h3>
-                <p id="subtitle-text"></p>
+                <img src="https://rj-cloud.pages.dev/ForMe/avatar-nobg.png" alt="logo">
+                <h3>Roy-Jin|<span class="subtitle">MyIndex</span></h3>
             </div>
+            <div id="menu-btn" class="fa-solid fa-bars"></div>
         </div>
 
-        <!-- 主要内容 -->
-        <div class="body">
-            <div class="ForMe">
-                <div class="base">
-                    <img src="https://rj-cloud.pages.dev/ForMe/avatar.png" alt="AVATAR" id="avatar">
-                    <h4 id="name">Roy-Jin</h4>
-                </div>
-                <div class="quote">
-                    <i class="fa-solid fa-quote-left"></i>
-                    <p id="quote-text"></p>
-                </div>
-                <div id="social">
-                    <li>https://github.com/Roy-Jin</li>
-                    <li>JinRoy@outlook.com</li>
-                    <li>https://qm.qq.com/q/2Qaj5mB6Jq</li>
-                    <li>https://space.bilibili.com/3461572714302163</li>
-                </div>
-            </div>
-            <div class="content">
-                <div class="today">
-                    <div id="date">
-                        <p class="time">
-                            <span class="num">00:00:00</span>
-                            <span class="sub">AM</span>
-                        </p>
-                        <p class="day">Monday, 1 January.</p>
-                    </div>
-                    <hr>
-                    <div id="sayings"></div>
-                </div>
-                <div id="projects">
-                    <li>[RuoYiBoard](https://ryboard.pages.dev)</li>
-                    <li>[JSTERM](https://jsterm.pages.dev)</li>
-                    <li>[2048](https://2048-rj.pages.dev)</li>
-                </div>
-            </div>
-        </div>
-
-        <!-- 面板区域 -->
-        <div class="p0"></div>
-        <div class="panel">
-            <div class="container">
-                <div class="p1"></div>
-                <div class="panel-content">
-                    <div class="drag-bar"></div>
-                    <iframe class="panel-content-container" src="/views/music/" frameborder="0"></iframe>
-                </div>
-                <div id="copyright">Copyright © 2024 - 2025 Roy-Jin</div>
-            </div>
-        </div>
+        <div id="toggle-menu"></div>
+        <div id="content-frames"></div>
     </div>
 </body>
 

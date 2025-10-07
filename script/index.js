@@ -1,0 +1,40 @@
+import router from '/module/router.js';
+import theme from '/module/theme.js';
+import pageshow from '/module/pageshow.js';
+
+window.onpageshow = () => {
+    setTimeout(() => {
+        document.querySelector(".loading").setAttribute("data-hidden", true);
+    }, 500);
+}
+
+document.querySelector(".loading>small").addEventListener("click", () => {
+    window.location.reload();
+});
+
+await router.init().then(() => { theme.init(true) });
+let site_data = (await pageshow.init()).data;
+pageshow.ref(
+    [{
+        selector: ".title img",
+        attr: {
+            src: site_data.avatar[1]
+        }
+    }, {
+        selector: ".title h3",
+        attr: {
+            innerHTML: site_data.title.split("|")[0]
+                + "|<span class='subtitle'>" + site_data.title.split("|")[1] + "</span>"
+        }
+    }]
+);
+
+document.getElementById("menu-btn").addEventListener("click", (e) => {
+    if (document.getElementById("toggle-menu").getAttribute("data-open")) {
+        document.getElementById("toggle-menu").removeAttribute("data-open");
+        e.target.classList = "fa-solid fa-bars";
+    } else {
+        document.getElementById("toggle-menu").setAttribute("data-open", true);
+        e.target.classList = "fa-solid fa-times";
+    }
+});

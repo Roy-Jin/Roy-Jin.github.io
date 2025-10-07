@@ -1,14 +1,19 @@
+@import url("/style/base.css");
+@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+
+* {
+    transition: var(--transition);
+}
+
 .body {
-    flex: 1;
     gap: 2rem;
+    height: 100%;
+    padding: 1rem;
     display: flex;
-    width: var(--main-width);
     flex-direction: row;
     align-items: center;
     justify-content: center;
     overflow-y: auto;
-    background-color: var(--page-bg);
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .body::-webkit-scrollbar {
@@ -106,6 +111,7 @@
     padding: 1rem;
     border-radius: 15px;
     display: flex;
+    pointer-events: none;
     justify-content: center;
     flex-direction: column;
     background: radial-gradient(ellipse at 33% 25%, var(--theme-color), transparent)
@@ -138,7 +144,7 @@
 }
 
 .today>#sayings {
-    font-family: "仓耳逍遥行书";
+    font-family: "仓耳渔阳体";
 }
 
 #sayings>.text {
@@ -174,6 +180,7 @@
 
 /* 当屏幕宽度小于等于 768px 时，应用以下样式调整 */
 @media screen and (max-width: 768px) {
+
     .body {
         flex-direction: column;
         justify-content: start;
@@ -192,5 +199,15 @@
     .content {
         width: 80%;
         margin-bottom: 1rem;
+    }
+
+    #date>.time {
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mui-scroll {
+        height: 100%;
     }
 }

@@ -1,33 +1,33 @@
+@import url("/style/mui.base.css");
+
 :root {
     /* 主色调 */
     --main-bg: #ffffff;
-    --page-bg: #e2e2e2;
     --panel-bg: #57b2aa;
     --theme-color: #45969c;
-    --theme-color-light: color-mix(in srgb, var(--theme-color) 20%, transparent);
     --text-color: #444;
     --primary-color: #4a90e2;
 
+    --theme-color-light: color-mix(in srgb, var(--theme-color) 20%, transparent);
+    --theme-color-dark: color-mix(in srgb, var(--theme-color) 60%, transparent);
+
     /* 其它变量 */
-    --border-radius: 4rem;
-    --panel-height: 55px;
+    --header-height: 48px;
+    --border-radius: 2rem;
     --transition: all 0.3s ease;
-    --main-width: calc(100vw - 1rem);
 }
 
 [data-theme="dark"] {
     /* 主色调 */
     --main-bg: #26242e;
-    --page-bg: #34323d;
     --panel-bg: #5d6d6f;
     --text-color: #e2e2e2;
 }
 
-/* 为优化加载速度这里改为动态加载了 */
-/* @font-face {
-    font-family: "仓耳逍遥行书";
-    src: url("/fonts/仓耳逍遥行书.ttf");
-} */
+@font-face {
+    font-family: "仓耳渔阳体";
+    src: url("/fonts/仓耳渔阳体W03.ttf");
+}
 
 @font-face {
     font-family: "Playball";
@@ -44,24 +44,20 @@
     padding: 0;
     user-select: none;
     box-sizing: border-box;
-    transition: var(--transition);
     -webkit-user-drag: none;
     -webkit-tap-highlight-color: transparent;
 }
 
-body {
+html,body {
+    width: 100dvw;
     height: 100dvh;
-    overflow-y: hidden;
-    font-family: "Playball";
+    overflow: hidden;
+    font-family: "Playball", "仓耳渔阳体";
     color: var(--text-color);
     background-color: var(--main-bg);
-    background: linear-gradient(to bottom, var(--main-bg), var(--page-bg));
 }
 
 .main {
-    height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: var(--panel-height);
+    width: 100%;
+    height: 100%;
 }
