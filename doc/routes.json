@@ -11,7 +11,7 @@
             "title": "MyIndex"
         },
         {
-            "enable": false,
+            "enable": true,
             "inner": [
                 "<span class='fa fa-music'></span>",
                 "Enjoy Music"

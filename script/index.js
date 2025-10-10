@@ -7,7 +7,6 @@ document.querySelector(".loading>small").addEventListener("click", () => {
     window.location.reload();
 });
 
-await router.init().then(() => { theme.init(true) });
 let site_data = (await pageshow.init()).data;
 pageshow.ref(
     [{
@@ -23,6 +22,8 @@ pageshow.ref(
         }
     }]
 );
+
+await router.init().then(() => { theme.init(true) });
 
 loaded().then(() => {
     document.querySelector(".loading").setAttribute("data-hidden", true);

@@ -5,6 +5,10 @@
     transition: var(--transition);
 }
 
+.mui-scroll {
+    padding-top: var(--header-height);
+}
+
 .body {
     gap: 2rem;
     height: 100%;

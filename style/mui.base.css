@@ -51,7 +51,7 @@
     transition-duration: 400ms;
 
     opacity: 0;
-    background: var(--theme-color-dark);
+    backdrop-filter: blur(30px);
 }
 
 .mui-popup-backdrop.mui-active {
@@ -270,8 +270,6 @@
     z-index: 1;
 
     width: 100%;
-
-    padding-top: var(--header-height);
 }
 
 .mui-scrollbar {

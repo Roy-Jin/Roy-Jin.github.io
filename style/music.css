@@ -1,1 +1,124 @@
 @import url("/style/base.css");
+@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+@import url("//cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css");
+
+#aplayer {
+    display: none;
+}
+
+.body {
+    gap: 2rem;
+    height: 100%;
+    padding: 1rem;
+    padding-top: calc(var(--header-height) + 1rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cover {
+    max-width: 400px;
+    width: 80%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 20px;
+    background-color: var(--theme-color-dark);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.info {
+    text-align: center;
+    max-width: 400px;
+    width: 80%;
+    font-family: "仓耳渔阳体";
+    filter: drop-shadow(var(--main-bg) 0 0 1rem);
+}
+
+.info>* {
+    margin: 0.5rem 0;
+}
+
+#name {
+    font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#author {
+    font-size: 0.6rem;
+    opacity: 0.6;
+}
+
+#lrc {
+    height: 5rem;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+#lrc::-webkit-scrollbar {
+    width: 0;
+}
+
+#lrc .translated {
+    font-size: 0.6rem;
+    opacity: 0.6;
+}
+
+.progressBar {
+    display: flex;
+    flex-direction: column;
+}
+
+.processBar #slider {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+}
+
+.processBar #slider::-webkit-slider-runnable-track {
+    background-color: var(--theme-color-dark);
+    border-radius: 5px;
+    height: 0.3rem;
+}
+
+.processBar #slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: .8rem;
+    width: 1rem;
+    border-radius: 2px 2px 50% 50%;
+    background-color: var(--theme-color);
+    cursor: pointer;
+    margin-top: -0.4rem;
+}
+
+.processBar .time-show {
+    opacity: 0.6;
+    font-size: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.controller {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.controller div {
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}

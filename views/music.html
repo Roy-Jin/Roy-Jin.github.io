@@ -10,12 +10,32 @@
 </head>
 
 <body>
-    <div class="mui-scroll-wrapper">
-        <div class="mui-scroll">
-            
+    <div id="aplayer"></div>
+    <div class="body">
+        <div id="cover"></div>
+        <div class="info">
+            <h1 id="name">Music Name</h1>
+            <p id="author">Music Singer</p>
+            <h4 id="lrc">Music Lyrics</h4>
+            <div class="processBar">
+                <input type="range" id="slider" value="0">
+                <div class="time-show">
+                    <p class="current">--:--</p>
+                    <p class="duration">--:--</p>
+                </div>
+            </div>
+            <div class="controller">
+                <div id="modes" class="fas fa-random"></div>
+                <div id="skipBack" class="fas fa-backward-step"></div>
+                <div id="playPause" class="fas fa-play"></div>
+                <div id="skipForward" class="fas fa-forward-step"></div>
+                <div id="heart" class="fas fa-heart"></div>
+            </div>
         </div>
     </div>
 </body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/color-thief/2.6.0/color-thief.min.js"></script>
 <script type="module" src="/script/music.js"></script>
 
 </html>
