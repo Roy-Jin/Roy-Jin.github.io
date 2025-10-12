@@ -78,6 +78,7 @@ let update = {
             let coverUrl = URL.createObjectURL(this.response);
             _image.onload = function () {
                 let color = colorThief.getColor(_image);
+                document.querySelector("#cover").style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
                 document.querySelector(".body").style.background = `linear-gradient(to top, rgba(${color[0]}, ${color[1]}, ${color[2]}, 0.6), transparent)`;
                 URL.revokeObjectURL(coverUrl)
             };
@@ -86,7 +87,40 @@ let update = {
         xhr.open('GET', coverUrl, true);
         xhr.responseType = 'blob';
         xhr.send();
+    },
+    HighDefinitionImg: async () => {
+        let index = ap.list.index;
+        let url = ap.list.audios[index].url;
+        let id = (new URLSearchParams(url)).get('id');
+        let PicUrl = await fetch('https://api.codetabs.com/v1/proxy?quest=https://music.163.com/m/song?id=' + id)
+            .then(response => response.text())
+            .then(html => {
+                const regex = /<img[^>]+src="http:\/\/(?:p1|p2)\.music\.126\.net\/[^"]+"/;
+                const match = html.match(regex);
+                if (match) {
+                    const urlRegex = /src="([^"]+)"/;
+                    const urlMatch = match[0].match(urlRegex);
+                    if (urlMatch && urlMatch.length >= 2) {
+                        const imageUrl = urlMatch[1];
+                        // 设置图片大小(尺寸)[当前360px]
+                        const urlObj = new URL(imageUrl);
+                        urlObj.search = "?param=360y360";
+                        const PicUrl = urlObj.href;
+                        return PicUrl;
+                    }
+                }
+            });
+
+        if (PicUrl) {
+            const img = new Image();
+            img.src = PicUrl;
+            img.onload = () => {
+                ap.list.audios[index].pic = PicUrl;
+                img = null;
+            };
+        }
     }
+
 
 }
 
@@ -124,6 +158,7 @@ ap.on("loadeddata", () => {
 ap.on("play", () => {
     playPause.classList = "fa fa-pause"
     update.themeColor();
+    update.HighDefinitionImg();
 });
 ap.on("pause", () => {
     playPause.classList = "fa fa-play"
