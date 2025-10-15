@@ -28,7 +28,8 @@ await router.init().then(() => { theme.init(true) });
 loaded().then(() => {
     document.querySelector(".loading").setAttribute("data-hidden", true);
 }).catch((error) => {
-    mui.toast(`<span style="color:brown;">${error.message}</span></span>`);
+    // mui.toast(`<span style="color:brown;">${error.message}</span></span>`);
+    console.error(error);
 });
 
 document.getElementById("menu-btn").addEventListener("click", (e) => {

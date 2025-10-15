@@ -18,7 +18,7 @@ let playPause = document.querySelector('#playPause');
 let skipForwardButton = document.querySelector('#skipForward');
 let skipBackButton = document.querySelector('#skipBack');
 let modes = document.querySelector('#modes');
-let heart = document.querySelector('#heart');
+let list = document.querySelector('#list');
 
 const colorThief = new ColorThief();
 const _image = new Image();
@@ -78,8 +78,9 @@ let update = {
             let coverUrl = URL.createObjectURL(this.response);
             _image.onload = function () {
                 let color = colorThief.getColor(_image);
-                document.querySelector("#cover").style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
-                document.querySelector(".body").style.background = `linear-gradient(to top, rgba(${color[0]}, ${color[1]}, ${color[2]}, 0.6), transparent)`;
+                document.documentElement.style.setProperty('--theme-color', `rgb(${color[0]}, ${color[1]}, ${color[2]})`)
+                // document.querySelector("#cover").style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+                // document.querySelector(".body").style.background = `linear-gradient(to top, rgba(${color[0]}, ${color[1]}, ${color[2]}, 0.6), transparent)`;
                 URL.revokeObjectURL(coverUrl)
             };
             _image.src = coverUrl;
@@ -132,7 +133,7 @@ playPause.addEventListener('click', () => { ap.template.button.click() });
 skipForwardButton.addEventListener('click', () => { ap.skipForward(); ap.play() });
 skipBackButton.addEventListener('click', () => { ap.skipBack(); ap.play() });
 modes.addEventListener('click', () => { mui.toast("此功能正在开发中...") })
-heart.addEventListener('click', () => { mui.toast("此功能正在开发中...") })
+list.addEventListener('click', () => { mui.toast("此功能正在开发中...") })
 
 
 function musicUpdate() {

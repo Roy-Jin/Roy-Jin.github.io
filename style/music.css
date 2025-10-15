@@ -15,6 +15,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: color-mix(in srgb, var(--main-bg), var(--theme-color-dark) 68%);
+    transition: background-color 1s ease-in-out;
 }
 
 #cover {
@@ -31,14 +33,12 @@
 
 .info {
     text-align: center;
-    max-width: 400px;
-    width: 80%;
+    width: 95%;
     font-family: "仓耳渔阳体";
-    filter: drop-shadow(var(--main-bg) 0 0 1rem);
 }
 
 .info>* {
-    margin: 0.5rem 0;
+    margin: 0.5rem auto;
 }
 
 #name {
@@ -57,7 +57,7 @@
     height: 5rem;
     overflow: scroll;
     display: flex;
-    justify-content: center;
+    justify-content: safe center;
     flex-direction: column;
     font-size: 1rem;
     font-weight: normal;
@@ -72,8 +72,9 @@
     opacity: 0.6;
 }
 
-.progressBar {
+.processBar {
     display: flex;
+    max-width: 600px;
     flex-direction: column;
 }
 
@@ -85,7 +86,7 @@
 }
 
 .processBar #slider::-webkit-slider-runnable-track {
-    background-color: var(--theme-color-dark);
+    background-color: var(--text-color);
     border-radius: 5px;
     height: 0.3rem;
 }
@@ -96,12 +97,14 @@
     width: 1rem;
     border-radius: 2px 2px 50% 50%;
     background-color: var(--theme-color);
+    border: 1px solid var(--text-color);
     cursor: pointer;
     margin-top: -0.4rem;
 }
 
 .processBar .time-show {
     opacity: 0.6;
+    margin-top: 3px;
     font-size: 0.6rem;
     display: flex;
     justify-content: space-between;
@@ -109,8 +112,9 @@
 
 .controller {
     margin-top: 2rem;
+    max-width: 600px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
