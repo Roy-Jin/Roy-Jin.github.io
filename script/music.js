@@ -79,8 +79,6 @@ let update = {
             _image.onload = function () {
                 let color = colorThief.getColor(_image);
                 document.documentElement.style.setProperty('--theme-color', `rgb(${color[0]}, ${color[1]}, ${color[2]})`)
-                // document.querySelector("#cover").style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
-                // document.querySelector(".body").style.background = `linear-gradient(to top, rgba(${color[0]}, ${color[1]}, ${color[2]}, 0.6), transparent)`;
                 URL.revokeObjectURL(coverUrl)
             };
             _image.src = coverUrl;
