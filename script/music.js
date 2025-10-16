@@ -39,13 +39,29 @@ let update = {
     },
     lrc: (current = [0, '无歌词收录...']) => {
         function handledLrc(str) {
-            const regex = /(.*)\(([^()]*)\)$/;
-            const match = str.match(regex);
-            if (match) {
-                return [match[1].trim(), match[2]];
-            } else {
+            if (typeof str !== 'string') return false;
+
+            let balance = 0;
+            let lastOpenIndex = -1;
+
+            for (let i = str.length - 1; i >= 0; i--) {
+                if (str[i] === ')') {
+                    balance++;
+                } else if (str[i] === '(') {
+                    balance--;
+                    if (balance === 0) {
+                        lastOpenIndex = i;
+                        break;
+                    }
+                }
+            }
+            if (lastOpenIndex === -1 || balance !== 0) {
                 return false;
             }
+            const mainContent = str.substring(0, lastOpenIndex).trim();
+            const bracketContent = str.substring(lastOpenIndex + 1, str.length - 1);
+
+            return [mainContent, bracketContent];
         }
         let lrcDom = document.querySelector('#lrc');
         let handled = handledLrc(current[1]);
